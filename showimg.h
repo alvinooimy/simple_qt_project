@@ -6,6 +6,7 @@
 QT_BEGIN_NAMESPACE
 class QGroupBox;
 class QPushButton;
+class QDialog;
 QT_END_NAMESPACE
 
 class showimg : public QWidget{
@@ -22,10 +23,11 @@ private slots:
 	
 private:
 	QGroupBox *createdaysgroup();
+	QString dayscount(int day);
+	
     QPushButton *heart_button;
 	int days;
-	
-	QString dayscount(int day);
+	QDialog *dlg;
 };
 
 #endif

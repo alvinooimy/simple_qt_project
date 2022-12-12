@@ -37,17 +37,22 @@ void showimg::heart_button_clicked(){
 	//qDebug() << path;
 	
 	if (path != "0"){
+		dlg = new QDialog();
+		
 		QLabel *label = new QLabel;
 		QImage image(path);
 		QImage image2 = image.scaled(400, 500, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 		label -> setScaledContents(true);
 		label -> setPixmap(QPixmap::fromImage(image2));
 		
-		QDialogButtonbox *closeb = new QDialogButtonbox(QDialogButtonBox::Close);
-		QDialog dlg;
-		QHBoxLayout *l = new QHBoxLayout(&dlg);
-		l -> addWidget(label);
-		dlg.exec();
+		QPushButton *closeb = new QPushButton("Close");
+		connect(closeb, SIGNAL(clicked()), dlg, SLOT(close()));
+		
+		QVBoxLayout *vbox = new QVBoxLayout(dlg);
+		vbox -> addWidget(label);
+		vbox -> addWidget(closeb);
+		dlg -> setAttribute(Qt::WA_DeleteOnClose, true);
+		dlg -> exec();
 	}
 }
 

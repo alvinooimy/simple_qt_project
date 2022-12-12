@@ -1,2 +1,2 @@
 # simple_qt_project
-Qt project
+Simple Qt project using c++

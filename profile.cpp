@@ -26,15 +26,15 @@ QGroupBox *profile::createprofilegroup(){
 	
 	QLabel *profile_name1 = new QLabel("Name");
 	QLabel *profile_name2 = new QLabel(":");
-	QLabel *profile_name3 = new QLabel("Ooi Kah Feng");
+	QLabel *profile_name3 = new QLabel("NAME");
 	
 	QLabel *age1 = new QLabel("Age");
 	QLabel *age2 = new QLabel(":");
-	QLabel *age3 = new QLabel("23");
+	QLabel *age3 = new QLabel("0");
 	
 	QLabel *gender1 = new QLabel("Sex");
 	QLabel *gender2 = new QLabel(":");
-	QLabel *gender3 = new QLabel("Male");
+	QLabel *gender3 = new QLabel("M/F");
 	
 	QGridLayout *mainlayout = new QGridLayout;
 	mainlayout -> addWidget(profile_name1, 0, 0);
@@ -54,8 +54,8 @@ QGroupBox *profile::createprofilegroup(){
 QGroupBox *profile::createacademygroup(){
 	QGroupBox *groupbox = new QGroupBox("Academics");
 	
-	QLabel *academic1 = new QLabel("NTUST");
-	QLabel *academic2 = new QLabel("NKUT");
+	QLabel *academic1 = new QLabel("Master");
+	QLabel *academic2 = new QLabel("Bachelor");
 	
 	QVBoxLayout *mainlayout = new QVBoxLayout;
 	mainlayout -> addWidget(academic1);

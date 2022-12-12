@@ -9,7 +9,6 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} "D:/qt/5.12.12/mingw73_64/lib/cmake/")
 find_package(Qt5 CONFIG REQUIRED COMPONENTS Widgets)
 
 add_executable(main

@@ -46,12 +46,22 @@ void showimg::heart_button_clicked(){
 		label -> setPixmap(QPixmap::fromImage(image2));
 		
 		QPushButton *closeb = new QPushButton("Close");
-		connect(closeb, SIGNAL(clicked()), dlg, SLOT(close()));
+		connect(closeb, QPushButton::clicked, dlg, QWidget::close);
+		
+		QHBoxLayout *hbox = new QHBoxLayout;
+		QLabel *hspacer = new QLabel;
+		hbox -> addWidget(hspacer);
+		hbox -> addWidget(hspacer);
+		hbox -> addWidget(hspacer);
+		hbox -> addWidget(closeb);
+		
 		
 		QVBoxLayout *vbox = new QVBoxLayout(dlg);
 		vbox -> addWidget(label);
-		vbox -> addWidget(closeb);
+		vbox -> addLayout(hbox);
+		
 		dlg -> setAttribute(Qt::WA_DeleteOnClose, true);
+		dlg -> setWindowTitle(QString::number(days));
 		dlg -> exec();
 	}
 }

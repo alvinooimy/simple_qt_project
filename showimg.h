@@ -14,9 +14,6 @@ class showimg : public QWidget{
 
 public:
     showimg(QWidget *parent = 0);
-
-signals:
-	void heart_button_signal();
 	
 private slots:
 	void heart_button_clicked();

@@ -19,6 +19,8 @@ add_executable(main
 	showimg.h
 	profile.cpp
 	profile.h
+	login.cpp
+	login.h
 )
 
 target_link_libraries(main
